@@ -7,6 +7,7 @@ namespace MyTaskApp
 {
     class Program
     {
+        //متد کمکی برای ساخت سرویس محصول با داده‌های اولیه
         private static IProductService BuildProduct()
         {
             var products = ProductSeedData.GetProducts();

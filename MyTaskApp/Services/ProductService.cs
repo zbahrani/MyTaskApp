@@ -1,9 +1,6 @@
 ﻿using MyTaskApp.Model;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MyTaskApp.Services
 {
@@ -12,14 +9,14 @@ namespace MyTaskApp.Services
         public ProductService(List<Product> products) : base(products)
         {
         }
-
+        //فیلتر کردن محصولات بر اساس دسته‌بندی مشخص با LINQ (Where)
         public override List<Product> GetByCategory(Categories category)
         {
             return _products
                 .Where(p => p.Category == category)
                 .ToList();
         }
-
+        //پیدا کردن محصول با بالاترین قیمت با LINQ (OrderByDescending + FirstOrDefault)
         public override Product GetProductWithMaxPrice()
         {
             return _products

@@ -11,7 +11,7 @@ namespace MyTaskApp.Services
         {
             _products = products;
         }
-        public abstract List<Product> GetByCategory();
+        public abstract List<Product> GetByCategory(Categories category);
         public abstract Product GetProductWithMaxPrice();
      
         public virtual decimal GetAveragePrice()

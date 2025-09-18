@@ -13,10 +13,10 @@ namespace MyTaskApp.Services
         {
         }
 
-        public override List<Product> GetByCategory()
+        public override List<Product> GetByCategory(Categories category)
         {
             return _products
-                .Where(p => p.Category == Categories.Category1)
+                .Where(p => p.Category == category)
                 .ToList();
         }
 

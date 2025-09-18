@@ -5,7 +5,7 @@ namespace MyTaskApp.Services
 {
     public interface IProductService
     {
-        List<Product> GetByCategory();
+        List<Product> GetByCategory(Categories category);
         public Product GetProductWithMaxPrice();
         public decimal GetTotalPrice();
         public decimal GetAveragePrice();

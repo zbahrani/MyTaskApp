@@ -20,6 +20,37 @@ namespace MyTaskApp
             {
                 Console.WriteLine($"{p.Id} - {p.Name} - {p.Price}");
             }
+
+            Console.WriteLine("---------------------------------");
+
+            var maxprice = product.GetProductWithMaxPrice();
+            Console.WriteLine($"{maxprice.Id} - " +
+                $"{maxprice.Name} - " +
+                $"{maxprice.Category} - " +
+                $"{maxprice.Price}");
+
+            Console.WriteLine("---------------------------------");
+
+            var totalprice = product.GetTotalPrice();
+            Console.WriteLine($"Total price is: {totalprice}");
+
+            Console.WriteLine("---------------------------------");
+
+            var grouped = product.GetProductsGroupedByCategory();
+            foreach (var group in grouped)
+            {
+                Console.WriteLine(group.Key);
+                foreach (var pro in group.Value)
+                {
+                    Console.WriteLine($"  {pro.Name} - {pro.Price}");
+                }
+            }
+
+            Console.WriteLine("---------------------------------");
+
+            var averageprice = product.GetAveragePrice();
+            Console.WriteLine($"Average price is: {averageprice}");
         }
+        
     }
 }
